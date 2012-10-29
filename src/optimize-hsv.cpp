@@ -11,7 +11,7 @@ int main(int argc, char const *argv[]) {
     string convert_cmd = "convert ";
 
     Vec3f v(50, 50, 50);
-    NelderMeadOptimizer<3> o(0.001);
+    NelderMeadOptimizer<3> o(10);
     float score;
 
     o.insert(Vec3f(200,50,50));
