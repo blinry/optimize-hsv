@@ -10,14 +10,14 @@ int main(int argc, char const *argv[]) {
     string image_viewer = "firefox ";
     string convert_cmd = "convert ";
 
-    Vec3f v(50, 50, 50);
-    NelderMeadOptimizer<3> o(10);
+    Vector v(50, 50, 50);
+    NelderMeadOptimizer o(3, 10);
     float score;
 
-    o.insert(Vec3f(200,50,50));
-    o.insert(Vec3f(50,200,50));
-    o.insert(Vec3f(50,50,200));
-    o.insert(Vec3f(20,20,20));
+    o.insert(Vector(200,50,50));
+    o.insert(Vector(50,200,50));
+    o.insert(Vector(50,50,200));
+    o.insert(Vector(20,20,20));
 
     system((image_viewer+target_img).c_str());
 
